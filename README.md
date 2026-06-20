@@ -49,6 +49,7 @@ Download the [Termux](https://play.google.com/store/apps/details?id=com.termux) 
 pkg update
 pkg install git clang
 pkg install build-essential cmake
+pkg install git-lfs
 ```
 ## Build Steps
 1. Clone the repository:
