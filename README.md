@@ -11,17 +11,39 @@ Checkout the [Low Memory](https://github.com/sarumanbeef/Rubiks_Cube_Solver_LM) 
 
 ## 🛠️ Build and Compilation Instructions
 
-This project utilizes `CMake` for building native binaries. Follow the instructions below to compile and run the solver on a Linux machine.
+This project utilizes `CMake` for building native binaries. Follow the instructions below to compile and run the solver on a machine.
 
 ## Pre-requisites
-#### For Desktop
 Ensure you have a modern C++ compiler supporting standard feautures (C++20 or newer)
+
+#### Debian:
 ```bash
 sudo apt update
 sudo apt install build-essential cmake
+sudo apt-get install git-lfs
 ```
 
-#### For Android
+#### Arch:
+```bash
+sudo pacman -Syu base-devel cmake
+sudo pacman -S git-lfs
+```
+
+#### Fedora:
+```
+sudo dnf groupinstall "Development Tools"
+sudo dnf install cmake
+sudo dnf install git-lfs
+```
+
+#### Mac:
+```bash
+xcode-select --install
+brew install cmake
+brew install git-lfs
+```
+
+#### Android:
 Download the [Termux](https://play.google.com/store/apps/details?id=com.termux) app from PlayStore.
 ```bash
 pkg update
@@ -34,11 +56,16 @@ pkg install build-essential cmake
    git clone https://github.com/sarumanbeef/Rubiks_Cube_Solver_HS/
    cd Rubiks_Cube_Solver_HS
    ```
-2. Generate the compiler build configuration:
+2. Forcefully download MoveTable.h (>25MB)
+   ```bash
+   git lfs install
+   git lfs pull
+   ```
+3. Generate the compiler build configuration:
    ```bash
    cmake -B build
    ```
-3. Compile and link the final executable:
+4. Compile and link the final executable:
    ```bash
    cmake --build build
    ```
