@@ -1,7 +1,7 @@
 # High Speed Kociemba Two-Phase Rubik's Cube Solver
 
 An optimized, single threaded C++ implementation of Kociemba's Algorithm that runs decently fast with a memory footprint of **~140MB of RAM**.
-Checkout the [Low Memory](https://github.com/sarumanbeef/Rubiks_Cube_Solver_LM) version that can run on very low memory devices. 
+Checkout the [Low Memory](https://github.com/sarumanbeef/Rubiks_Cube_Solver_LM) version to run on very low memory devices. 
 
 ## Highlights
 * **Short Solution:** The engine first quickly comes with a short solution equal to or less than 20 moves.
